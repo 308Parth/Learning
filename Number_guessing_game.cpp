@@ -1,4 +1,5 @@
 #include <iostream>
+#include <time.h>
 
 int main(){
 
@@ -6,8 +7,9 @@ int main(){
     int guess;
     int tries;
 
-    srand(time(NULL));
+    //srand(time(NULL));
     num = (rand() % 100) + 1;
+    tries = 0;
 
     std::cout << "******* NUMBER GUESSING GAME ********\n";
 
@@ -23,7 +25,7 @@ int main(){
             std::cout << "Too low!\n";
         }
         else{
-            std::cout << "CORRECT! # of tries: " << tries << '\n';
+            std::cout << "CORRECT! number of tries: " << tries << '\n';
         }
     }while(guess != num);
 
